@@ -1,0 +1,389 @@
+/* ==========================================================
+   CONVERSOR UNIVERSAL DE MEDIDAS
+   responsive.css
+   Sprint 01
+   Autor: Johny Viana Pereira
+==========================================================*/
+
+
+/* ==========================================================
+   DESKTOP GRANDE
+==========================================================*/
+
+@media (min-width:1400px){
+
+    .container{
+
+        max-width:1400px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   NOTEBOOK
+==========================================================*/
+
+@media (max-width:1200px){
+
+    .grid-layout{
+
+        grid-template-columns:380px 1fr;
+
+        gap:25px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+==========================================================*/
+
+@media (max-width:992px){
+
+    .header{
+
+        height:auto;
+
+        padding:20px 0;
+
+    }
+
+    .header .container{
+
+        justify-content:center;
+
+    }
+
+    .logo{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .logo h1{
+
+        font-size:1.6rem;
+
+    }
+
+    .logo p{
+
+        font-size:.9rem;
+
+    }
+
+    .grid-layout{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card{
+
+        padding:25px;
+
+    }
+
+    .results{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+/* ==========================================================
+   CELULAR GRANDE
+==========================================================*/
+
+@media (max-width:768px){
+
+    body{
+
+        font-size:15px;
+
+    }
+
+    .container{
+
+        width:92%;
+
+    }
+
+    .logo-icon{
+
+        font-size:38px;
+
+    }
+
+    .logo h1{
+
+        font-size:1.45rem;
+
+    }
+
+    .card{
+
+        padding:22px;
+
+    }
+
+    .card h2{
+
+        font-size:1.35rem;
+
+    }
+
+    .subtitle{
+
+        font-size:.90rem;
+
+    }
+
+    .results{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .result-card{
+
+        padding:18px;
+
+    }
+
+    .result-card span{
+
+        font-size:1.5rem;
+
+    }
+
+    footer .container{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
+
+
+/* ==========================================================
+   CELULAR PEQUENO
+==========================================================*/
+
+@media (max-width:576px){
+
+    .container{
+
+        width:95%;
+
+    }
+
+    .header{
+
+        margin-bottom:25px;
+
+    }
+
+    .logo{
+
+        gap:12px;
+
+    }
+
+    .logo-icon{
+
+        font-size:34px;
+
+    }
+
+    .logo h1{
+
+        font-size:1.25rem;
+
+    }
+
+    .logo p{
+
+        font-size:.82rem;
+
+    }
+
+    .card{
+
+        padding:18px;
+
+        border-radius:14px;
+
+    }
+
+    .card h2{
+
+        font-size:1.2rem;
+
+    }
+
+    .subtitle{
+
+        margin-bottom:20px;
+
+    }
+
+    .form-group{
+
+        margin-bottom:20px;
+
+    }
+
+    .form-group label{
+
+        font-size:.90rem;
+
+    }
+
+    .form-group input[type="text"]{
+
+        height:48px;
+
+        font-size:.95rem;
+
+        padding:0 15px;
+
+    }
+
+    .radio-card{
+
+        padding:14px;
+
+        gap:12px;
+
+    }
+
+    .radio-card span{
+
+        font-size:.92rem;
+
+    }
+
+    #btnConverter{
+
+        height:50px;
+
+        font-size:.95rem;
+
+    }
+
+    .result-card{
+
+        padding:16px;
+
+    }
+
+    .result-card h3{
+
+        font-size:.82rem;
+
+    }
+
+    .result-card span{
+
+        font-size:1.35rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   CELULAR MUITO PEQUENO
+==========================================================*/
+
+@media (max-width:380px){
+
+    .logo h1{
+
+        font-size:1.05rem;
+
+    }
+
+    .logo p{
+
+        font-size:.75rem;
+
+    }
+
+    .card{
+
+        padding:15px;
+
+    }
+
+    .radio-card{
+
+        padding:12px;
+
+    }
+
+    .radio-card span{
+
+        font-size:.85rem;
+
+    }
+
+    .result-card span{
+
+        font-size:1.15rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   IMPRESSÃO
+==========================================================*/
+
+@media print{
+
+    body{
+
+        background:#FFF;
+
+    }
+
+    .header{
+
+        box-shadow:none;
+
+    }
+
+    #btnConverter{
+
+        display:none;
+
+    }
+
+    footer{
+
+        display:none;
+
+    }
+
+    .card{
+
+        box-shadow:none;
+
+        border:1px solid #DDD;
+
+    }
+
+}

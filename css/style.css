@@ -1,0 +1,1229 @@
+/* =========================================================
+   CONVERSOR UNIVERSAL DE MEDIDAS
+   style.css
+   Sprint 01 - Parte 1/4
+   Autor: Johny Viana Pereira
+=========================================================*/
+
+/* =========================================================
+   RESET
+=========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:var(--font-family);
+
+    background:var(--background);
+
+    color:var(--text-primary);
+
+    line-height:1.6;
+
+    min-height:100vh;
+
+}
+
+/* =========================================================
+   LINKS
+=========================================================*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* =========================================================
+   IMAGENS
+=========================================================*/
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+/* =========================================================
+   LISTAS
+=========================================================*/
+
+ul,
+ol{
+
+    list-style:none;
+
+}
+
+/* =========================================================
+   BOTÕES
+=========================================================*/
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+/* =========================================================
+   INPUTS
+=========================================================*/
+
+input{
+
+    font-family:inherit;
+
+}
+
+/* =========================================================
+   CONTAINER
+=========================================================*/
+
+.container{
+
+    width:min(95%, var(--container-width));
+
+    margin:auto;
+
+}
+
+/* =========================================================
+   HEADER
+=========================================================*/
+
+.header{
+
+    width:100%;
+
+    height:var(--header-height);
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    box-shadow:var(--shadow-md);
+
+    margin-bottom:40px;
+
+}
+
+.header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* =========================================================
+   LOGO
+=========================================================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.logo-icon{
+
+    font-size:45px;
+
+}
+
+.logo h1{
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    margin-bottom:2px;
+
+}
+
+.logo p{
+
+    opacity:.9;
+
+    font-size:.92rem;
+
+}
+
+/* =========================================================
+   MAIN
+=========================================================*/
+
+main{
+
+    padding-bottom:50px;
+
+}
+
+/* =========================================================
+   GRID PRINCIPAL
+=========================================================*/
+
+.grid-layout{
+
+    display:grid;
+
+    grid-template-columns:
+
+        420px
+
+        1fr;
+
+    gap:30px;
+
+    align-items:start;
+
+}
+
+/* =========================================================
+   CARD PADRÃO
+=========================================================*/
+
+.card{
+
+    background:var(--surface);
+
+    border-radius:var(--radius-lg);
+
+    padding:var(--card-padding);
+
+    box-shadow:var(--shadow-md);
+
+    border:1px solid var(--border-color);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* =========================================================
+   TÍTULOS
+=========================================================*/
+
+.card h2{
+
+    font-size:1.55rem;
+
+    font-weight:700;
+
+    color:var(--primary-dark);
+
+    margin-bottom:8px;
+
+}
+
+/* =========================================================
+   SUBTÍTULO
+=========================================================*/
+
+.subtitle{
+
+    color:var(--text-secondary);
+
+    font-size:.95rem;
+
+    margin-bottom:28px;
+
+}
+
+/* =========================================================
+   DIVISOR
+=========================================================*/
+
+hr{
+
+    border:none;
+
+    height:1px;
+
+    background:var(--border-color);
+
+    margin:25px 0;
+
+}
+
+/* =========================================================
+   SCROLL SUAVE DOS CARDS
+=========================================================*/
+
+.card{
+
+    animation:fadeUp .45s ease;
+
+}
+
+/* =========================================================
+   ANIMAÇÃO
+=========================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+            translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+            translateY(0);
+
+    }
+
+}
+
+/* =========================================================
+   SPRINT 01 - PARTE 2/4
+   FORMULÁRIOS
+=========================================================*/
+
+/* =========================================================
+   FORM GROUP
+=========================================================*/
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:28px;
+
+}
+
+/* =========================================================
+   LABELS
+=========================================================*/
+
+.form-group label{
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    color:var(--text-primary);
+
+    margin-bottom:10px;
+
+}
+
+/* =========================================================
+   INPUT
+=========================================================*/
+
+.form-group input[type="text"]{
+
+    width:100%;
+
+    height:var(--input-height);
+
+    padding:0 18px;
+
+    border:2px solid var(--border-color);
+
+    border-radius:var(--radius-md);
+
+    background:var(--surface);
+
+    color:var(--text-primary);
+
+    font-size:1rem;
+
+    transition:var(--transition);
+
+}
+
+.form-group input[type="text"]::placeholder{
+
+    color:var(--text-light);
+
+}
+
+.form-group input[type="text"]:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/* =========================================================
+   RADIO GROUP
+=========================================================*/
+
+.radio-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+/* =========================================================
+   RADIO CARD
+=========================================================*/
+
+.radio-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px;
+
+    border:2px solid var(--border-color);
+
+    border-radius:var(--radius-md);
+
+    background:var(--surface);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    user-select:none;
+
+}
+
+.radio-card:hover{
+
+    border-color:var(--primary);
+
+    background:var(--primary-light);
+
+    transform:translateX(4px);
+
+}
+
+/* =========================================================
+   ESCONDE O RADIO PADRÃO
+=========================================================*/
+
+.radio-card input[type="radio"]{
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    border:2px solid var(--primary);
+
+    position:relative;
+
+    cursor:pointer;
+
+    flex-shrink:0;
+
+}
+
+/* =========================================================
+   BOLINHA INTERNA
+=========================================================*/
+
+.radio-card input[type="radio"]::before{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%) scale(0);
+
+    transition:.20s;
+
+}
+
+.radio-card input[type="radio"]:checked::before{
+
+    transform:translate(-50%,-50%) scale(1);
+
+}
+
+/* =========================================================
+   TEXTO DO RADIO
+=========================================================*/
+
+.radio-card span{
+
+    font-size:1rem;
+
+    font-weight:500;
+
+    color:var(--text-primary);
+
+}
+
+/* =========================================================
+   BOTÃO CONVERTER
+=========================================================*/
+
+#btnConverter{
+
+    width:100%;
+
+    height:var(--button-height);
+
+    margin-top:10px;
+
+    border:none;
+
+    border-radius:var(--radius-md);
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:#FFF;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    letter-spacing:.4px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+/* =========================================================
+   HOVER BOTÃO
+=========================================================*/
+
+#btnConverter:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* =========================================================
+   CLICK BOTÃO
+=========================================================*/
+
+#btnConverter:active{
+
+    transform:scale(.98);
+
+}
+
+/* =========================================================
+   DESABILITADO
+=========================================================*/
+
+#btnConverter:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+/* =========================================================
+   FOCO ACESSIBILIDADE
+=========================================================*/
+
+button:focus,
+input:focus{
+
+    outline:none;
+
+}
+
+/* =========================================================
+   PEQUENA ANIMAÇÃO
+=========================================================*/
+
+.radio-card,
+#btnConverter,
+input{
+
+    transition:all .30s ease;
+
+}
+
+/* =========================================================
+   SPRINT 01 - PARTE 3/4
+   ÁREA DE RESULTADOS
+=========================================================*/
+
+/* =========================================================
+   GRID DOS RESULTADOS
+=========================================================*/
+
+.results{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin-top:25px;
+
+}
+
+/* =========================================================
+   CARD DE RESULTADO
+=========================================================*/
+
+.result-card{
+
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        #f8fafc
+    );
+
+    border:1px solid var(--border-color);
+
+    border-left:6px solid var(--primary);
+
+    border-radius:var(--radius-lg);
+
+    padding:20px;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-sm);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* =========================================================
+   EFEITO SUPERIOR
+=========================================================*/
+
+.result-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+/* =========================================================
+   HOVER
+=========================================================*/
+
+.result-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-lg);
+
+    border-left-color:var(--secondary);
+
+}
+
+/* =========================================================
+   TÍTULO
+=========================================================*/
+
+.result-card h3{
+
+    font-size:.95rem;
+
+    color:var(--text-secondary);
+
+    font-weight:600;
+
+    margin-bottom:14px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+}
+
+/* =========================================================
+   VALOR
+=========================================================*/
+
+.result-card span{
+
+    display:block;
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    color:var(--primary-dark);
+
+    word-break:break-word;
+
+}
+
+/* =========================================================
+   CORES ESPECÍFICAS
+=========================================================*/
+
+#resultado-mm{
+
+    color:#2563EB;
+
+}
+
+#resultado-decimal{
+
+    color:#7C3AED;
+
+}
+
+#resultado-fracionaria{
+
+    color:#059669;
+
+}
+
+#resultado-64{
+
+    color:#EA580C;
+
+}
+
+#resultado-32{
+
+    color:#DC2626;
+
+}
+
+#resultado-16{
+
+    color:#0891B2;
+
+}
+
+#resultado-8{
+
+    color:#9333EA;
+
+}
+
+/* =========================================================
+   ANIMAÇÃO
+=========================================================*/
+
+.result-card{
+
+    animation:fadeResult .6s ease;
+
+}
+
+@keyframes fadeResult{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =========================================================
+   FOOTER
+=========================================================*/
+
+footer{
+
+    margin-top:50px;
+
+    padding:35px 0;
+
+    background:#FFF;
+
+    border-top:1px solid var(--border-color);
+
+}
+
+footer .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+footer p{
+
+    color:var(--text-primary);
+
+    font-weight:600;
+
+}
+
+footer small{
+
+    color:var(--text-secondary);
+
+}
+
+/* =========================================================
+   TRANSIÇÕES GLOBAIS
+=========================================================*/
+
+.result-card,
+.card,
+button,
+input{
+
+    transition:all .30s ease;
+
+}
+
+/* =========================================================
+   EFEITO AO PASSAR O MOUSE NOS CARDS
+=========================================================*/
+
+.card:hover .result-card{
+
+    opacity:.96;
+
+}
+
+/* =========================================================
+   SPRINT 01 - PARTE 4/4
+   FINALIZAÇÃO
+=========================================================*/
+
+/* =========================================================
+   UTILITÁRIOS
+=========================================================*/
+
+.text-center{
+    text-align:center;
+}
+
+.text-right{
+    text-align:right;
+}
+
+.text-left{
+    text-align:left;
+}
+
+.hidden{
+    display:none !important;
+}
+
+.visible{
+    display:block !important;
+}
+
+.w-100{
+    width:100%;
+}
+
+/* =========================================================
+   ESTADOS DOS RESULTADOS
+=========================================================*/
+
+.result-success{
+
+    color:var(--success) !important;
+
+}
+
+.result-warning{
+
+    color:var(--warning) !important;
+
+}
+
+.result-danger{
+
+    color:var(--danger) !important;
+
+}
+
+/* =========================================================
+   MENSAGEM DE ALERTA
+=========================================================*/
+
+.alert{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border-radius:var(--radius-md);
+
+    font-weight:500;
+
+}
+
+.alert-success{
+
+    background:#DCFCE7;
+
+    color:#166534;
+
+    border-left:5px solid #16A34A;
+
+}
+
+.alert-warning{
+
+    background:#FEF3C7;
+
+    color:#92400E;
+
+    border-left:5px solid #F59E0B;
+
+}
+
+.alert-error{
+
+    background:#FEE2E2;
+
+    color:#991B1B;
+
+    border-left:5px solid #DC2626;
+
+}
+
+/* =========================================================
+   LOADING DO BOTÃO
+=========================================================*/
+
+.loading{
+
+    pointer-events:none;
+
+    opacity:.8;
+
+}
+
+.loading::after{
+
+    content:"...";
+
+    display:inline-block;
+
+    margin-left:8px;
+
+    animation:dots 1s infinite;
+
+}
+
+@keyframes dots{
+
+    0%{
+        content:".";
+    }
+
+    33%{
+        content:"..";
+    }
+
+    66%{
+        content:"...";
+    }
+
+}
+
+/* =========================================================
+   INPUT INVÁLIDO
+=========================================================*/
+
+.input-error{
+
+    border-color:var(--danger)!important;
+
+    box-shadow:0 0 0 4px rgba(239,68,68,.15);
+
+}
+
+/* =========================================================
+   INPUT VÁLIDO
+=========================================================*/
+
+.input-success{
+
+    border-color:var(--success)!important;
+
+    box-shadow:0 0 0 4px rgba(34,197,94,.15);
+
+}
+
+/* =========================================================
+   HOVER SUAVE NOS CARDS
+=========================================================*/
+
+.result-card:hover span{
+
+    transform:scale(1.04);
+
+    display:inline-block;
+
+}
+
+/* =========================================================
+   HEADER FIXO (PRONTO PARA FUTURAS VERSÕES)
+=========================================================*/
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+}
+
+/* =========================================================
+   ANIMAÇÃO DOS BOTÕES
+=========================================================*/
+
+button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:120%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.20);
+
+    transform:skewX(-25deg);
+
+    transition:.7s;
+
+}
+
+button:hover::before{
+
+    left:130%;
+
+}
+
+/* =========================================================
+   SOMBRA MAIS SUAVE
+=========================================================*/
+
+.card{
+
+    backdrop-filter:blur(8px);
+
+}
+
+/* =========================================================
+   ANIMAÇÃO DOS RESULTADOS
+=========================================================*/
+
+.result-card{
+
+    animation-duration:.5s;
+
+    animation-fill-mode:both;
+
+}
+
+.result-card:nth-child(1){
+
+    animation-delay:.05s;
+
+}
+
+.result-card:nth-child(2){
+
+    animation-delay:.10s;
+
+}
+
+.result-card:nth-child(3){
+
+    animation-delay:.15s;
+
+}
+
+.result-card:nth-child(4){
+
+    animation-delay:.20s;
+
+}
+
+.result-card:nth-child(5){
+
+    animation-delay:.25s;
+
+}
+
+.result-card:nth-child(6){
+
+    animation-delay:.30s;
+
+}
+
+.result-card:nth-child(7){
+
+    animation-delay:.35s;
+
+}
+
+/* =========================================================
+   SELEÇÃO DE TEXTO
+=========================================================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:#FFF;
+
+}
+
+/* =========================================================
+   SCROLLBAR FIREFOX
+=========================================================*/
+
+*{
+
+    scrollbar-width:thin;
+
+    scrollbar-color:var(--primary) #ECECEC;
+
+}
+
+/* =========================================================
+   TRANSIÇÕES GLOBAIS
+=========================================================*/
+
+*{
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+
+}
+
+/* =========================================================
+   FIM DO ARQUIVO
+=========================================================*/
