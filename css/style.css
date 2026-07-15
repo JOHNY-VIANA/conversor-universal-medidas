@@ -104,41 +104,102 @@ input{
 
 }
 
-/* =========================================================
+/* ===========================
    HEADER
-=========================================================*/
+=========================== */
 
 .header{
 
-    width:100%;
+    background:linear-gradient(135deg,#2450d6,#2d4bb8);
 
-    height:var(--header-height);
+    padding:25px 0;
 
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        var(--primary-dark)
-    );
+    color:#fff;
 
-    color:white;
-
-    display:flex;
-
-    align-items:center;
-
-    box-shadow:var(--shadow-md);
-
-    margin-bottom:40px;
+    margin-bottom: 30px;
 
 }
 
-.header .container{
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
 
     display:flex;
 
-    justify-content:space-between;
-
     align-items:center;
+
+    justify-content:center;
+
+    gap:25px;
+
+}
+
+
+/* ===========================
+   IMAGEM
+=========================== */
+
+.logo-icon{
+
+    width:90px;
+
+    height:90px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.20);
+
+}
+
+.logo-icon img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+/* ===========================
+   TEXTOS
+=========================== */
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo-text h1{
+
+    margin:0;
+
+    font-size:2.7rem;
+
+    font-weight:700;
+
+}
+
+.logo-text p{
+
+    margin-top:8px;
+
+    font-size:1.1rem;
+
+    opacity:.95;
 
 }
 
@@ -152,31 +213,53 @@ input{
 
     align-items:center;
 
-    gap:18px;
+    justify-content:center;
+
+    gap:30px;
 
 }
 
 .logo-icon{
 
-    font-size:45px;
+    width:90px;
+
+    height:90px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.20);
 
 }
 
-.logo h1{
+.logo-icon img{
 
-    font-size:1.8rem;
+    width:100%;
 
-    font-weight:700;
+    height:100%;
 
-    margin-bottom:2px;
+    object-fit:cover;
 
 }
 
-.logo p{
+.logo-text h1{
 
-    opacity:.9;
+    margin:0;
 
-    font-size:.92rem;
+    font-size:3rem;
+
+}
+
+.logo-text p{
+
+    margin-top:8px;
+
+    font-size:1.1rem;
 
 }
 
